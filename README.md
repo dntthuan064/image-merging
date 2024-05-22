@@ -1,7 +1,12 @@
 Install lib:
-```npm install sharp```
-To run:
-```node main.js```
+```
+    npm install sharp
+```
+
+Run code:
+```
+node main.js
+```
 
 If you want to change the position of the baseImage, set the `left` option from "0" to "width" for `img` and `baseImage`
 
