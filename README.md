@@ -1,6 +1,6 @@
 Install lib:
 ```
-    npm install sharp
+npm install sharp
 ```
 
 Run code:
