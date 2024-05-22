@@ -25,17 +25,12 @@ async function mergeImages() {
                 }
             });
 
-            // // Merge the images (baseImage is displayed on the right side)
-            // mergedImage = await mergedImage.composite([
-            //     { input: await img.toBuffer(), left: 0, top: 0 },
-            //     { input: await baseImage.toBuffer(), left: width, top: 0 }
-            // ]);
-
-            // Merge the images (baseImage is displayed on the left side) - enable this if you want to put the baseImage to the left
+            // Merge the images (baseImage is displayed on the right side)
             mergedImage = await mergedImage.composite([
-                { input: await img.toBuffer(), left: width, top: 0 },
-                { input: await baseImage.toBuffer(), left: 0, top: 0 },
+                { input: await img.toBuffer(), left: 0, top: 0 },
+                { input: await baseImage.toBuffer(), left: width, top: 0 }
             ]);
+
             let outputPath = path.join(outputFolderPath, `Merged_${i}_${j}.jpg`);
             await mergedImage.toFile(outputPath);
         }
